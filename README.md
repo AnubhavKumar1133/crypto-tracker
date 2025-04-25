@@ -35,20 +35,20 @@ The application follows a clean architecture pattern:
 ## Setup Instructions
 
 1. Clone the repository:
-   \`\`\`
+   ```
    git clone https://github.com/yourusername/crypto-price-tracker.git
    cd crypto-price-tracker
-   \`\`\`
+   ```
 
 2. Install dependencies:
-   \`\`\`
+   ```
    npm install
-   \`\`\`
+   ```
 
 3. Run the development server:
-   \`\`\`
+  ```
    npm run dev
-   \`\`\`
+  ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
