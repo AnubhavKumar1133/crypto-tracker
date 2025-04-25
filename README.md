@@ -69,5 +69,5 @@ The application follows a clean architecture pattern:
 - Supply progress bars for cryptocurrencies with max supply
 
 ## Demo
-
-![Crypto Price Tracker Demo](demo.gif)
+[Live Link](https://vxiassignment.netlify.app/)
+[Demo Link](https://drive.google.com/file/d/1z7I1x8aI2MtFEUZNFqSkQFUbRAdn3cMo/view?usp=sharing)
