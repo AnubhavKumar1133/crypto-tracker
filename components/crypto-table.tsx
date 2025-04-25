@@ -9,7 +9,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import Image from "next/image"
 import MiniChart from "@/components/mini-chart"
-
+import { toast } from "@/hooks/use-toast"
 export default function CryptoTable() {
   const cryptos = useSelector(selectAllCryptos)
   const [sortColumn, setSortColumn] = useState<string>("rank")
@@ -85,7 +85,7 @@ export default function CryptoTable() {
                   <TooltipContent>
                     <p className="w-64">A measure of how much of a cryptocurrency was traded in the last 24 hours.</p>
                   </TooltipContent>
-                </Tooltip>
+                </Tooltip>  
               </TooltipProvider>
             </TableHead>
             <TableHead className="text-right cursor-default" onClick={() => handleSort("circulatingSupply")}>
@@ -111,7 +111,16 @@ export default function CryptoTable() {
             <TableRow key={crypto.id}>
               <TableCell className="text-center">
                 <div className="flex items-center justify-center gap-2">
-                  <Star className="h-4 w-4 text-muted-foreground cursor-pointer hover:text-yellow-500"/>
+                  <Star 
+                    className="h-4 w-4 text-muted-foreground cursor-pointer hover:text-yellow-500"
+                    onClick={() => {
+                      toast({
+                        title: "Added to favorites",
+                        description: `${crypto.name} has been added to your favorites.`,
+                        
+                      })
+                    }}
+                  />
                   {crypto.rank}
                 </div>
               </TableCell>
